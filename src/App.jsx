@@ -11,6 +11,9 @@ function App() {
   const handleAddItems = (item) => {
     setItems((items) => [...items, item]);
   };
+  //Here, item is a parameter for the handleAddItems function. 
+  //This means that whenever handleAddItems is called, 
+  //whatever value is passed to it will be available as item inside the function.
 
   return (
     <div className="app">
