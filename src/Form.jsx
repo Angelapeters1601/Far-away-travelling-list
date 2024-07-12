@@ -9,13 +9,16 @@ function Form({ handleAddItems }) {
 
     if (!description) return; //prevents submitting empty form
 
+    //creating new items
     const newItem = { description, quantity, packed: false, id: Date.now() };
     console.log(newItem);
 
+    //adding new items on submit
     handleAddItems(newItem);
 
+    //returns state to original after submission
     setDescription("");
-    setQuantity(1); //returns state to original after submission
+    setQuantity(1);
   };
 
   return (
