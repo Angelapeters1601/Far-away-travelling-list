@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Form() {
+function Form({ handleAddItems }) {
   const [description, setDescription] = useState("");
   const [quantity, setQuantity] = useState(1);
 
@@ -11,6 +11,8 @@ function Form() {
 
     const newItem = { description, quantity, packed: false, id: Date.now() };
     console.log(newItem);
+
+    handleAddItems(newItem);
 
     setDescription("");
     setQuantity(1); //returns state to original after submission
