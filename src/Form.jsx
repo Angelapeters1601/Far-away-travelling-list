@@ -18,7 +18,7 @@ function Form({ handleAddItems }) {
 
     //returns state to original after submission
     setDescription("");
-    setQuantity(1); 
+    setQuantity(1);
   };
 
   return (

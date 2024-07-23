@@ -1,11 +1,16 @@
-function Item({ item }) {
+function Item({ item, handleDeleteItem, handleToggleItem }) {
   return (
     <div>
       <li>
-        <span style={item.packed ? { textDecoration: "line-through" } : {}}>
+        <input type="checkbox" onChange={() => handleToggleItem(item.id)} />
+        <span
+          style={
+            item.packed ? { textDecoration: "line-through", color: "grey" } : {}
+          }
+        >
           {item.quantity} {item.description}
         </span>
-        <button>❌</button>
+        <button onClick={() => handleDeleteItem(item.id)}>❌</button>
       </li>
     </div>
   );
