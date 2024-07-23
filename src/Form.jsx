@@ -15,7 +15,7 @@ function Form({ handleAddItems }) {
 
     //adding new items on submit
     handleAddItems(newItem);
-
+    console.log(newItem);
     //returns state to original after submission
     setDescription("");
     setQuantity(1);
